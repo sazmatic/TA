@@ -399,3 +399,34 @@ main {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+#tentative-agreements summary.ta-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary);
+  padding: 1.2rem;
+  background-color: var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  list-style: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#tentative-agreements summary::-webkit-details-marker {
+  display: none;
+}
+
+#tentative-agreements[open] summary.ta-title::after {
+  content: "▲";
+  float: right;
+  color: var(--primary-dark);
+  margin-left: 1rem;
+}
+
+#tentative-agreements summary.ta-title::after {
+  content: "▼";
+  float: right;
+  color: var(--primary-dark);
+  margin-left: 1rem;
+}
