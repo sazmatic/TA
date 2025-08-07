@@ -86,7 +86,6 @@ header {
   margin-top: 2rem;
   padding: 2.5rem 2rem;
   background: linear-gradient(to bottom, #ffffff, #f9fafc);
-  border-left: 6px solid var(--accent);
   border-radius: 12px;
   max-width: 950px;
   margin-left: auto;
