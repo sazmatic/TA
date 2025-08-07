@@ -168,3 +168,48 @@ footer {
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
+
+#ta-dropdown {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#ta-dropdown summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--primary);
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+#ta-dropdown summary::marker {
+  display: none;
+}
+
+#ta-dropdown[open] summary::after {
+  content: "▲";
+  float: right;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+#ta-dropdown summary::after {
+  content: "▼";
+  float: right;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+#button-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
