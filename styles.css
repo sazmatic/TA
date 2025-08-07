@@ -139,13 +139,11 @@ header {
 }
 
 #ta-dropdown[open] summary::after {
-  content: "▲";
   font-size: 0.9rem;
   color: var(--accent);
 }
 
 #ta-dropdown summary::after {
-  content: "▼";
   font-size: 0.9rem;
   color: var(--accent);
 }
