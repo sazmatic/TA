@@ -354,12 +354,19 @@ main {
   padding: 1rem 1.5rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   white-space: nowrap;
   max-width: 100%;
+  cursor: pointer;
+}
+
+.ta-icon,
+.ta-label,
+.ta-arrow {
+  display: inline-block;
 }
 
 #tentative-agreements details {
