@@ -1,12 +1,8 @@
+/* General layout stays the same from earlier */
 :root {
   --primary: #004c97;
   --background: #f4f6f9;
   --white: #ffffff;
-  --gray: #555;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {
@@ -17,86 +13,58 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
 }
 
 header {
   background-color: var(--primary);
-  color: var(--white);
-  padding: 1.5rem 0;
+  color: white;
   text-align: center;
+  padding: 1.5rem 0;
 }
 
 header h1 {
   margin: 0 0 0.5rem;
-  font-size: 2rem;
 }
 
-.main {
+#button-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
 }
 
-.sidebar {
+#button-list button {
   flex: 1 1 250px;
-  background: var(--white);
-  border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
   padding: 1rem;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar a {
-  display: block;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-  text-decoration: none;
-  color: var(--primary);
-  background-color: #e9f1fc;
-  border-radius: 6px;
-  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0ecf9;
+  color: #004c97;
+  font-weight: bold;
+  cursor: pointer;
   transition: background 0.2s ease;
 }
 
-.sidebar a:hover {
-  background-color: #d4e6fb;
+#button-list button:hover {
+  background-color: #c7dbf4;
 }
 
 #ta-content {
-  flex: 3 1 600px;
-  background-color: var(--white);
+  background: var(--white);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.05);
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
 
 footer {
   background-color: #eee;
   padding: 1rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin-top: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-  }
-
-  .sidebar a {
-    font-size: 1rem;
-  }
-
-  header h1 {
-    font-size: 1.6rem;
-  }
 }
