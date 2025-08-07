@@ -348,13 +348,12 @@ main {
   transform: rotate(180deg);
 }
 .ta-title {
-  background-color: var(--accent);
-  color: var(--primary-dark);
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 1rem 0;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: var(--primary);
+  display: inline-flex;         /* makes the line behave like text */
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;         /* prevents wrapping to the next line */
 }
 
 #tentative-agreements details {
