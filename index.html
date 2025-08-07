@@ -8,36 +8,58 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-<header>
-  <div class="container header-flex">
-    <img src="logo.png" alt="Teamsters Logo" class="logo" />
-    <div class="site-info">
-      <h1>Tentative Agreements</h1>
-      <p>Corewell Health & Teamsters Local 2024</p>
-      <small>Last updated: August 7, 2025</small>
-    </div>
+  <div id="page">
+    <header>
+      <div class="container header-flex">
+        <img src="logo.png" alt="Teamsters Logo" class="logo" />
+        <div class="site-info">
+          <h1>Tentative Agreements</h1>
+          <p>Corewell Health & Teamsters Local 2024</p>
+          <small>Last updated: August 7, 2025</small>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="tentative-agreements">
+        <details id="ta-dropdown" open>
+          <summary>
+            Tentative Agreements
+            <span class="dropdown-icon"></span>
+          </summary>
+          <div id="button-list">
+            <button data-section="recognition">✅ Recognition</button>
+            <button data-section="union-representatives-list">✅ Union Representatives List</button>
+            <button data-section="non-discrimination">✅ Non-Discrimination</button>
+            <!-- Add more buttons here -->
+          </div>
+        </details>
+      </section>
+
+      <section id="ta-content">
+        <!-- Agreement content will load here when a button is clicked -->
+      </section>
+
+      <section id="negotiation-updates">
+        <h2>Negotiation Updates</h2>
+
+        <details>
+          <summary>June 24, 2025</summary>
+          <img src="update1.png" alt="Negotiation Update 1" />
+        </details>
+
+        <details>
+          <summary>July 23-24, 2025</summary>
+          <img src="update2.png" alt="Negotiation Update 2" />
+        </details>
+
+        <details>
+          <summary>August 6, 2025</summary>
+          <img src="update3.png" alt="Negotiation Update 3" />
+        </details>
+      </section>
+    </main>
   </div>
-</header>
-
-<section id="tentative-agreements">
-  <details id="ta-dropdown" open>
-    <summary>
-      Tentative Agreements
-      <span class="dropdown-icon"></span>
-    </summary>
-    <div id="button-list">
-      <button data-section="recognition">✅ Recognition</button>
-      <button data-section="union-representatives-list">✅ Union Representatives List</button>
-      <button data-section="non-discrimination">✅ Non-Discrimination</button>
-      <!-- Add more buttons here -->
-    </div>
-  </details>
-</section>
-
-    <section id="ta-content">
-      <!-- Agreement content will load here when a button is clicked -->
-    </section>
-  </main>
 
   <footer>
     <div class="container">
@@ -46,21 +68,3 @@
   </footer>
 </body>
 </html>
-<section id="negotiation-updates">
-  <h2>Negotiation Updates</h2>
-
-  <details>
-    <summary>June 24, 2025</summary>
-    <img src="update1.png" alt="Negotiation Update 1" />
-  </details>
-
-  <details>
-    <summary>July 23-24, 2025</summary>
-    <img src="update2.png" alt="Negotiation Update 2" />
-  </details>
-
-  <details>
-    <summary>August 6, 2025</summary>
-    <img src="update3.png" alt="Negotiation Update 3" />
-  </details>
-</section>
