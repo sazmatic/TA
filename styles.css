@@ -25,7 +25,46 @@ header h1 {
   font-size: 2rem;
   margin-bottom: 0.25rem;
 }
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.logo {
+  max-height: 70px;
+  width: auto;
+}
+
+.site-info h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--accent); /* this is your #efc056 */
+}
+
+.site-info p {
+  margin: 0.3rem 0;
+  font-weight: bold;
+  color: white;
+}
+
+.site-info small {
+  color: #ddd;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    max-height: 60px;
+  }
+}
 #button-list {
   display: flex;
   flex-wrap: wrap;
