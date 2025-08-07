@@ -1,19 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll("a[data-section]");
+  const buttons = document.querySelectorAll("button[data-section]");
   const content = document.getElementById("ta-content");
 
-  links.forEach(link => {
-    link.addEventListener("click", async (e) => {
-      e.preventDefault();
-      const section = link.getAttribute("data-section");
+  buttons.forEach(button => {
+    button.addEventListener("click", async () => {
+      const section = button.getAttribute("data-section");
+      const url = `./sections/${section}.html`;
 
       try {
-        const res = await fetch(`./sections/${section}.html`);
-        if (!res.ok) throw new Error("Failed to load section.");
+        const res = await fetch(url);
+        if (!res.ok) {
+          throw new Error(`Failed to load ${section}.html`);
+        }
+
         const html = await res.text();
         content.innerHTML = html;
+        content.scrollIntoView({ behavior: 'smooth' });
       } catch (err) {
-        content.innerHTML = "<p>Error loading section. Please try again later.</p>";
+        console.error(err);
+        content.innerHTML = `
+          <div style="color: red; font-weight: bold;">
+            ⚠️ Error loading section. Please check the file name or try again later.
+          </div>
+        `;
       }
     });
   });
