@@ -119,7 +119,6 @@ header {
 }
 
 #ta-dropdown summary::after {
-  content: "▼";
   position: absolute;
   right: 1.25rem;
   top: 50%;
@@ -129,7 +128,6 @@ header {
 }
 
 #ta-dropdown[open] summary::after {
-  content: "▲";
 }
 
 #ta-dropdown summary:hover {
