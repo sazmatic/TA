@@ -1,99 +1,75 @@
-/* General layout stays the same from earlier */
 :root {
-  --primary: #004c97;
+  --primary: #203751;
+  --primary-dark: #142535;
+  --accent: #efc056;
   --background: #f4f6f9;
+  --text: #142535;
   --white: #ffffff;
 }
 
 body {
-  margin: 0;
   font-family: system-ui, sans-serif;
   background-color: var(--background);
-  color: #222;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1rem;
+  color: var(--text);
+  margin: 0;
 }
 
 header {
   background-color: var(--primary);
-  color: white;
+  color: var(--accent);
+  padding: 2rem 0;
   text-align: center;
-  padding: 1.5rem 0;
 }
 
 header h1 {
-  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
 }
 
 #button-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   justify-content: center;
 }
 
 #button-list button {
-  flex: 1 1 250px;
-  padding: 1rem;
-  font-size: 1rem;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
   border: none;
   border-radius: 8px;
-  background-color: #e0ecf9;
-  color: #004c97;
-  font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s ease;
+  font-size: 1rem;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 #button-list button:hover {
-  background-color: #c7dbf4;
-}
-
-#ta-content {
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
-}
-
-footer {
-  background-color: #eee;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  margin-top: 2rem;
+  background-color: var(--primary-dark);
+  box-shadow: 0 0 0 2px var(--accent);
 }
 
 .ta-article {
-  background-color: #fdfdfd;
-  border-left: 5px solid #004c97;
+  background-color: var(--white);
+  border-left: 5px solid var(--accent);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   margin-top: 2rem;
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-.ta-header {
-  margin-bottom: 1.5rem;
-}
-
 .ta-header h2 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #004c97;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
 .ta-meta {
-  margin-top: 0.25rem;
-  font-size: 0.9rem;
   color: #666;
+  font-size: 0.9rem;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -106,4 +82,13 @@ footer {
 
 .ta-content li {
   margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: var(--primary-dark);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
 }
