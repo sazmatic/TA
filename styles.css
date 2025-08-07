@@ -59,7 +59,13 @@ header {
 
 @media (max-width: 600px) {
   .logo {
-    max-height: 90px;
+    max-height: 120px;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    gap: 0.5rem; /* reduce spacing between logo and title */
+    padding: 1rem 0; /* reduce padding */
   }
 
   .site-info h1 {
