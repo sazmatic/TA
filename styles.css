@@ -17,7 +17,7 @@ body {
 header {
   background-color: var(--primary);
   color: var(--accent);
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@ header {
 }
 
 .logo {
-  max-height: 100px;
+  max-height: 120px;
   width: auto;
 }
 
