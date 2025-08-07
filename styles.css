@@ -82,18 +82,34 @@ header {
 }
 
 #ta-dropdown summary {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
   color: var(--primary);
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1rem;
+  text-align: center;
   background-color: #f9f9f9;
+  padding: 1rem;
   border-radius: 6px;
   transition: background 0.2s ease;
+  position: relative;
+}
+
+#ta-dropdown summary:hover {
+  background-color: #f0f0f0;
+}
+
+#ta-dropdown summary::after {
+  content: "▼";
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+#ta-dropdown[open] summary::after {
+  content: "▲";
 }
 
 #ta-dropdown summary:hover {
