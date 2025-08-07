@@ -21,10 +21,6 @@ header {
   text-align: center;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-}
 .header-flex {
   display: flex;
   align-items: center;
@@ -41,7 +37,7 @@ header h1 {
 .site-info h1 {
   margin: 0;
   font-size: 2rem;
-  color: var(--accent); /* this is your #efc056 */
+  color: var(--accent);
 }
 
 .site-info p {
@@ -65,12 +61,67 @@ header h1 {
     max-height: 60px;
   }
 }
+
+#tentative-agreements {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-top: 4px solid var(--accent);
+  border-radius: 8px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#ta-dropdown {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  background: white;
+}
+
+#ta-dropdown summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--primary);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+#ta-dropdown summary:hover {
+  background-color: #f0f0f0;
+}
+
+#ta-dropdown summary::marker {
+  display: none;
+}
+
+#ta-dropdown[open] summary::after {
+  content: "▲";
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+#ta-dropdown summary::after {
+  content: "▼";
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
 #button-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 2rem 0;
   justify-content: center;
+  margin-top: 1.5rem;
 }
 
 #button-list button {
@@ -89,18 +140,6 @@ header h1 {
   background-color: var(--primary-dark);
   box-shadow: 0 0 0 2px var(--accent);
 }
-#tentative-agreements {
-  margin-top: 2rem;
-  padding: 2rem;
-  background-color: #fdfdfd;
-  border-top: 4px solid var(--accent);
-  border-radius: 8px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-
-  
 
 .ta-article {
   background-color: var(--white);
@@ -135,20 +174,16 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
-footer {
-  background-color: var(--primary-dark);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-}
 #negotiation-updates {
   margin-top: 4rem;
   padding: 2rem;
   background-color: #fdfdfd;
   border-top: 4px solid var(--accent);
   border-radius: 8px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 #negotiation-updates h2 {
@@ -181,47 +216,11 @@ footer {
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
-#ta-dropdown {
-  margin: 2rem auto;
-  width: 100%;
-  max-width: 800px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+footer {
+  background-color: var(--primary-dark);
+  color: white;
+  text-align: center;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-#ta-dropdown summary {
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: var(--primary);
-  list-style: none;
-  margin-bottom: 1rem;
-}
-
-#ta-dropdown summary::marker {
-  display: none;
-}
-
-#ta-dropdown[open] summary::after {
-  content: "▲";
-  float: right;
-  font-size: 0.8rem;
-  color: var(--accent);
-}
-
-#ta-dropdown summary::after {
-  content: "▼";
-  float: right;
-  font-size: 0.8rem;
-  color: var(--accent);
-}
-
-#button-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
 }
