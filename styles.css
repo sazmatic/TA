@@ -84,93 +84,69 @@ header {
 
 #tentative-agreements {
   margin-top: 2rem;
-  padding: 2rem;
-  background-color: #fdfdfd;
-  border-top: 4px solid var(--accent);
-  border-radius: 8px;
-  max-width: 900px;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(to bottom, #ffffff, #f9fafc);
+  border-left: 6px solid var(--accent);
+  border-radius: 12px;
+  max-width: 950px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
-#ta-dropdown {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 1rem;
-  background: white;
-}
-
-#ta-dropdown summary {
-  font-size: 1.3rem;
-  font-weight: bold;
+#tentative-agreements summary {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 0;
   cursor: pointer;
   color: var(--primary);
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 6px;
-  transition: background 0.2s ease;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
 }
 
-#ta-dropdown summary:hover {
-  background-color: #f0f0f0;
-}
-
-#ta-dropdown summary::after {
-  position: absolute;
-  right: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--accent);
-  font-size: 0.9rem;
-}
-
-#ta-dropdown[open] summary::after {
-}
-
-#ta-dropdown summary:hover {
-  background-color: #f0f0f0;
-}
-
-#ta-dropdown summary::marker {
+#tentative-agreements summary::marker,
+#tentative-agreements summary::-webkit-details-marker {
   display: none;
 }
 
-#ta-dropdown[open] summary::after {
-  font-size: 0.9rem;
+#tentative-agreements summary::after {
+  content: "▼";
+  font-size: 1rem;
   color: var(--accent);
+  transition: transform 0.3s ease;
 }
 
-#ta-dropdown summary::after {
-  font-size: 0.9rem;
-  color: var(--accent);
+#tentative-agreements[open] summary::after {
+  transform: rotate(180deg);
 }
 
 #button-list {
+  margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin-top: 1.5rem;
 }
 
 #button-list button {
-  background-color: var(--primary);
-  color: white;
+  background-color: var(--accent);
+  color: var(--primary-dark);
   font-weight: bold;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.4rem;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 10px;
   font-size: 1rem;
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 #button-list button:hover {
-  background-color: var(--primary-dark);
-  box-shadow: 0 0 0 2px var(--accent);
+  background-color: #f1b935;
+  transform: scale(1.05);
 }
 
 .ta-article {
