@@ -57,9 +57,23 @@ header {
     text-align: center;
   }
 
+@media (max-width: 600px) {
   .logo {
-    max-height: 60px;
+    max-height: 90px;
   }
+
+  .site-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .site-info p {
+    font-size: 1rem;
+  }
+
+  .site-info small {
+    font-size: 0.85rem;
+  }
+}
 }
 
 #tentative-agreements {
