@@ -131,3 +131,40 @@ footer {
   margin-top: 4rem;
   font-size: 0.9rem;
 }
+#negotiation-updates {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-top: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+#negotiation-updates h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#negotiation-updates details {
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+#negotiation-updates summary {
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+#negotiation-updates img {
+  margin-top: 1rem;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
