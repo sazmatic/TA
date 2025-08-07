@@ -350,17 +350,19 @@ main {
 .ta-title {
   background-color: var(--accent);
   color: var(--primary-dark);
-  font-size: 1.2rem;
-  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  padding: 1rem 1.2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  white-space: nowrap;
   max-width: 100%;
-  cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ta-icon,
