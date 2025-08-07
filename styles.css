@@ -346,3 +346,55 @@ main {
 #tentative-agreements[open] .ta-summary-wrapper::after {
   transform: rotate(180deg);
 }
+.ta-title {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+#tentative-agreements details {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+#tentative-agreements summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--primary);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+#tentative-agreements summary::marker,
+#tentative-agreements summary::-webkit-details-marker {
+  display: none;
+}
+
+#tentative-agreements summary::after {
+  content: "▼";
+  float: right;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+#tentative-agreements[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.ta-box {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
