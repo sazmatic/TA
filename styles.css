@@ -287,3 +287,62 @@ main {
   line-height: 1.6;
   font-size: 0.95rem;
 }
+
+/* Fix mobile responsiveness closing tag */
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    max-height: 120px;
+  }
+
+  .site-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .site-info p {
+    font-size: 1rem;
+  }
+
+  .site-info small {
+    font-size: 0.85rem;
+  }
+} /* <--- this bracket was missing in your CSS */
+
+/* Tentative Agreements header styling */
+#tentative-agreements summary {
+  padding: 0;
+  border: none;
+}
+
+.ta-summary-wrapper {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ta-summary-wrapper::after {
+  content: "▼";
+  margin-left: 0.75rem;
+  font-size: 1rem;
+  color: var(--primary-dark);
+  transition: transform 0.3s ease;
+}
+
+#tentative-agreements[open] .ta-summary-wrapper::after {
+  transform: rotate(180deg);
+}
