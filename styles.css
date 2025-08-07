@@ -352,16 +352,16 @@ main {
   color: var(--primary-dark);
   text-align: center;
   font-size: 1.2rem;
-  padding: 1rem 0;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-
-  /* New additions to keep it on one line */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  white-space: nowrap;
+  max-width: 100%;
+  white-space: normal;
+  flex-wrap: wrap;
 }
 
 #tentative-agreements details {
