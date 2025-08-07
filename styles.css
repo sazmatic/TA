@@ -151,13 +151,15 @@ header {
 
 .ta-article {
   background-color: var(--white);
-  border-left: 5px solid var(--accent);
+  border-top: 6px solid var(--accent); /* yellow strip on top */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   margin-top: 2rem;
   font-size: 1.05rem;
   line-height: 1.7;
+  transition: all 0.3s ease;
+}
 }
 
 .ta-header h2 {
