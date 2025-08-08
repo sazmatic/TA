@@ -457,14 +457,30 @@ main {
   padding-left: 1.5em;     /* keeps text aligned after letter */
 }
 
-.ta-label {
-  display: inline-block;
-  background-color: #d9e8ff; /* light blue for MOA */
-  color: #003366;            /* dark navy text */
+/* main dropdown title (unchanged) */
+.ta-section-title { font-size: 1.2rem; font-weight: 700; }
+
+/* keep title and pill on the same line when space allows */
+.ta-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap; /* lets the pill wrap only on very small screens */
+}
+
+/* hard override any generic h3 span rules that might be making spans block */
+.ta-heading span { display: inline; }
+
+/* the pill */
+.ta-badge{
+  display: inline-flex;        /* stays inline with the title */
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;        /* pill shape */
+  background: #d9e8ff;
+  color: #003366;
   font-size: 0.7rem;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-left: 8px; /* space from title */
-  vertical-align: middle;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
