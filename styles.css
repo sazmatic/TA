@@ -524,3 +524,75 @@ main {
 /* remove extra paragraph whitespace inside cards */
 .ta-content p:first-child { margin-top: 0; }
 .ta-content p:last-child  { margin-bottom: 0; }
+
+/* ===== TA PILL (centered, single arrow) – FINAL OVERRIDES ===== */
+#tentative-agreements{
+  max-width: 950px;
+  margin: 16px auto;
+  padding: 0;
+  text-align: center;               /* centers inline content (the pill) */
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Kill all native/custom arrows elsewhere */
+#tentative-agreements summary::-webkit-details-marker{ display:none; }
+#tentative-agreements summary::marker{ content:""; }
+#tentative-agreements summary::after{ content:none !important; }
+
+/* The pill itself */
+#tentative-agreements > summary.ta-title{
+  display: inline-flex;             /* shrink to content so centering works */
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: .75rem 1.25rem;
+  border-radius: 999px;             /* pill shape */
+  margin: 0 auto 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* check and single arrow we control */
+#tentative-agreements > summary.ta-title::before{
+  content:"✔";
+  font-size: .95rem;
+  line-height: 1;
+}
+#tentative-agreements > summary.ta-title::after{
+  content:"▾";
+  font-size: .95rem;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+#tentative-agreements[open] > summary.ta-title::after{
+  transform: rotate(180deg);
+}
+
+/* Make the TA cards left-aligned, not centered */
+#tentative-agreements .ta-article{
+  text-align: left;
+  background: var(--white);
+  border-top: 6px solid var(--accent);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  margin: 12px 8px 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Mobile: avoid zoom-out */
+@media (max-width: 420px){
+  #tentative-agreements > summary.ta-title{
+    font-size: 1rem;
+    padding: .6rem 1rem;
+    white-space: normal; /* wrap if truly needed */
+  }
+}
