@@ -670,27 +670,27 @@ header .site-info p:nth-of-type(2) {
     line-height: 1.2;
   }
 #public-calendar {
-  max-width: 950px; /* match your other main sections */
+  max-width: 950px; /* match your other boxes */
   margin: 3rem auto;
   padding: 2rem;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   border-top: 4px solid var(--accent);
-  text-align: center;
 }
 
 #public-calendar h2 {
   font-size: 1.6rem;
   color: var(--primary);
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.calendar-frame {
+#public-calendar iframe {
   display: block;
   margin: 0 auto;
-  width: 100%;
-  min-height: 500px; /* make it taller so events are visible */
+  width: 100% !important;   /* override Google inline width */
+  height: 600px;            /* adjust as needed */
   border: none;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
