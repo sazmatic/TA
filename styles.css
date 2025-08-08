@@ -670,3 +670,26 @@ header .site-info p:nth-of-type(2) {
     line-height: 1.2;
   }
 }
+#public-calendar {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fafbfc;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  text-align: center;
+}
+
+#public-calendar h2 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.calendar-frame {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 6px;
+}
