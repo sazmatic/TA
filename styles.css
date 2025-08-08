@@ -457,6 +457,9 @@ main {
   padding-left: 1.5em;     /* keeps text aligned after letter */
 }
 
+/* main dropdown title (unchanged) */
+.ta-section-title { font-size: 1.2rem; font-weight: 700; }
+
 /* keep title and pill on the same line when space allows */
 .ta-heading {
   display: flex;
@@ -481,3 +484,43 @@ main {
   line-height: 1;
   white-space: nowrap;
 }
+
+/* tighten the TA dropdown card */
+#tentative-agreements {
+  background: #fff;
+  border-radius: 16px;
+  padding: 8px;          /* was likely 24–32px */
+  margin: 12px 0;        /* reduce outer gap */
+}
+
+/* kill default details/summary spacing */
+#tentative-agreements,
+#tentative-agreements summary {
+  margin: 0;
+}
+
+/* style only the gold bar, not the whole card */
+#tentative-agreements > summary.ta-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;    /* inner padding of the bar */
+  border-radius: 12px;
+  background: #e7b44a;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* hide native marker so only your ▾ shows */
+#tentative-agreements summary::-webkit-details-marker { display: none; }
+
+/* when open, give a little breathing room for items */
+#tentative-agreements[open] { padding-bottom: 8px; }
+
+/* tighten inside content spacing once open */
+#tentative-agreements > .ta-article { margin: 12px 8px 0; }
+#tentative-agreements > .ta-article:first-of-type { margin-top: 12px; }
+
+/* remove extra paragraph whitespace inside cards */
+.ta-content p:first-child { margin-top: 0; }
+.ta-content p:last-child  { margin-bottom: 0; }
