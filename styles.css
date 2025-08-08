@@ -456,3 +456,14 @@ main {
   text-indent: -1.5em;     /* pulls first line back so letter sticks out */
   padding-left: 1.5em;     /* keeps text aligned after letter */
 }
+
+.ta-label {
+  display: inline-block;
+  background-color: #e0e0e0; /* light gray background */
+  color: #333;               /* dark text */
+  font-size: 0.75rem;         /* small text */
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
