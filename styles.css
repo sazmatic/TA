@@ -33,17 +33,20 @@ header {
   max-height: 120px;
   width: auto;
 }
-
 .site-info h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
   color: var(--accent);
+  letter-spacing: 0.5px; /* subtle spacing for modern look */
 }
 
 .site-info p {
-  margin: 0.3rem 0;
-  font-weight: bold;
-  color: white;
+  margin: 0.4rem 0 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--white);
+  opacity: 0.9; /* softer so it doesn’t shout */
 }
 
 .site-info small {
@@ -442,15 +445,30 @@ main {
   margin-left: 1rem;
 }
 #site-intro {
-  max-width: 900px;
-  margin: 2rem auto 1rem auto;
-  padding: 0 1rem;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--primary-dark);
+  max-width: 750px;
+  margin: 1.5rem auto;
+  padding: 1rem 1.25rem;
   text-align: center;
+  line-height: 1.5;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
 }
 
+#site-intro h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.35rem;
+}
+
+#site-intro p {
+  margin: 0;
+  opacity: 0.85;
+}
 .subpoint {
   margin-left: 2em;        /* pushes the block in */
   text-indent: -1.5em;     /* pulls first line back so letter sticks out */
@@ -594,5 +612,72 @@ main {
     font-size: 1rem;
     padding: .6rem 1rem;
     white-space: normal; /* wrap if truly needed */
+  }
+}
+
+/* Modernize main site title */
+header .site-info h1 {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 2.2vw + 1rem, 2.4rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  position: relative;
+}
+
+header .site-info h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px auto 0;
+  background-color: var(--accent);
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+/* Modernize subheadings */
+header .site-info p:nth-of-type(1) {
+  font-weight: 600;
+  font-size: clamp(1rem, 0.5vw + 0.9rem, 1.15rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+header .site-info p:nth-of-type(2) {
+  font-size: clamp(0.9rem, 0.4vw + 0.85rem, 1rem);
+  font-weight: 500;
+  background-color: rgba(239, 192, 86, 0.15);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-top: 0.4rem;
+  border: 1px solid rgba(239, 192, 86, 0.35);
+}
+/* Center all major headings */
+.site-info h1,
+.site-info p,
+#tentative-agreements h2,
+#negotiation-updates h2,
+#faq-section h2 {
+  text-align: center;
+}
+
+/* Adjust heading sizes for mobile so they stay on one line */
+@media (max-width: 600px) {
+  .site-info h1 {
+    font-size: 1.5rem; /* smaller for mobile */
+    line-height: 1.2;
+  }
+
+  .site-info p {
+    font-size: 0.95rem;
+  }
+
+  #tentative-agreements h2,
+  #negotiation-updates h2,
+  #faq-section h2 {
+    font-size: 1.3rem;
+    line-height: 1.2;
   }
 }
