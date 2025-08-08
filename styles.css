@@ -669,9 +669,9 @@ header .site-info p:nth-of-type(2) {
     font-size: 1.3rem;
     line-height: 1.2;
   }
-  #public-calendar {
+#public-calendar {
   max-width: 980px;
-  margin: 3rem auto;        /* center on page */
+  margin: 3rem auto;       /* center the card */
   padding: 2rem;
   background: #fff;
   border-radius: 8px;
@@ -680,25 +680,27 @@ header .site-info p:nth-of-type(2) {
   text-align: center;
 }
 
+#public-calendar h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
 #public-calendar .cal-frame {
   display: flex;
   justify-content: center;
 }
 
-#public-calendar .cal-inner {
-  width: 100%;
-  max-width: 900px;         /* wide on desktop */
-}
-
 #public-calendar iframe {
   width: 100% !important;
+  max-width: 900px;        /* makes it wide on desktop */
   height: 520px;
   border: 0;
-  display: block;
-  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 @media (max-width: 600px) {
   #public-calendar { padding: 1.25rem; }
-  #public-calendar iframe { height: 460px; }
+  #public-calendar iframe { height: 460px; max-width: 100%; }
 }
