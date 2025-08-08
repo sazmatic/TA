@@ -450,3 +450,9 @@ main {
   color: var(--primary-dark);
   text-align: center;
 }
+
+.subpoint {
+  margin-left: 2em;        /* pushes the block in */
+  text-indent: -1.5em;     /* pulls first line back so letter sticks out */
+  padding-left: 1.5em;     /* keeps text aligned after letter */
+}
