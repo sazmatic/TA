@@ -707,3 +707,49 @@ header .site-info p:nth-of-type(2) {
   #public-calendar.card { padding: 1.25rem; }
   #public-calendar .cal-frame iframe { height: 460px; }
 }
+/* Calendar card */
+#public-calendar.card {
+  max-width: 950px;
+  margin: 3rem auto !important;     /* center the whole card */
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  border-top: 4px solid var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+#public-calendar h2 {
+  margin: 0 0 1rem 0;
+  color: var(--primary);
+}
+
+/* Hard centering + width control on desktop */
+#public-calendar .cal-frame {
+  display: flex; 
+  justify-content: center;           /* centers inner box */
+}
+
+#public-calendar .cal-inner {
+  flex: 1 1 860px;                   /* grow but aim for ~860px */
+  max-width: 860px;                  /* nice, wide desktop width */
+  min-width: 320px;
+}
+
+/* Make the iframe fill the centered inner box */
+#public-calendar iframe {
+  width: 100% !important;            /* ignore Google’s fixed width */
+  height: 520px;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: block;
+  margin: 0 auto !important;         /* belt & suspenders */
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  #public-calendar.card { padding: 1.25rem; }
+  #public-calendar .cal-inner { max-width: 100%; }
+  #public-calendar iframe { height: 460px; }
+}
