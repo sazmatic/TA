@@ -459,11 +459,12 @@ main {
 
 .ta-label {
   display: inline-block;
-  background-color: #e0e0e0; /* light gray background */
-  color: #333;               /* dark text */
-  font-size: 0.75rem;         /* small text */
+  background-color: #d9e8ff; /* light blue for MOA */
+  color: #003366;            /* dark navy text */
+  font-size: 0.7rem;
   font-weight: bold;
   padding: 2px 6px;
   border-radius: 4px;
-  margin-bottom: 4px;
+  margin-left: 8px; /* space from title */
+  vertical-align: middle;
 }
