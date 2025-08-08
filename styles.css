@@ -669,48 +669,9 @@ header .site-info p:nth-of-type(2) {
     font-size: 1.3rem;
     line-height: 1.2;
   }
-/* Calendar card matches your other sections and stays centered */
-#public-calendar.card {
-  max-width: 950px;          /* same width as Negotiation Updates */
-  margin: 3rem auto;         /* centers the whole card */
-  padding: 2rem;
-  background: #fff;
-  border-radius: 8px;
-  border-top: 4px solid var(--accent);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  text-align: center;        /* center the heading only */
-}
-
-#public-calendar.card h2 {
-  font-size: 1.6rem;
-  color: var(--primary);
-  margin: 0 0 1rem 0;
-}
-
-/* Force the iframe to fill the card and be centered */
-#public-calendar .cal-frame {
-  width: 100%;
-}
-
-#public-calendar .cal-frame iframe {
-  display: block;            /* enables margin centering */
-  margin: 0 auto;            /* center horizontally */
-  width: 100% !important;    /* override Google’s fixed width */
-  height: 520px;             /* adjust as needed */
-  border: 0;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-/* Mobile tweak so it doesn’t feel huge */
-@media (max-width: 480px) {
-  #public-calendar.card { padding: 1.25rem; }
-  #public-calendar .cal-frame iframe { height: 460px; }
-}
-/* Calendar card */
-#public-calendar.card {
-  max-width: 950px;
-  margin: 3rem auto !important;     /* center the whole card */
+  #public-calendar {
+  max-width: 980px;
+  margin: 3rem auto;        /* center on page */
   padding: 2rem;
   background: #fff;
   border-radius: 8px;
@@ -719,75 +680,25 @@ header .site-info p:nth-of-type(2) {
   text-align: center;
 }
 
-#public-calendar h2 {
-  margin: 0 0 1rem 0;
-  color: var(--primary);
-}
-
-/* Hard centering + width control on desktop */
 #public-calendar .cal-frame {
-  display: flex; 
-  justify-content: center;           /* centers inner box */
+  display: flex;
+  justify-content: center;
 }
 
 #public-calendar .cal-inner {
-  flex: 1 1 860px;                   /* grow but aim for ~860px */
-  max-width: 860px;                  /* nice, wide desktop width */
-  min-width: 320px;
-}
-
-/* Make the iframe fill the centered inner box */
-#public-calendar iframe {
-  width: 100% !important;            /* ignore Google’s fixed width */
-  height: 520px;
-  border: 0;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  display: block;
-  margin: 0 auto !important;         /* belt & suspenders */
-}
-
-/* Mobile tweaks */
-@media (max-width: 480px) {
-  #public-calendar.card { padding: 1.25rem; }
-  #public-calendar .cal-inner { max-width: 100%; }
-  #public-calendar iframe { height: 460px; }
-}
-/* === FORCE-CENTER PUBLIC CALENDAR (desktop + mobile) === */
-#public-calendar { 
-  max-width: 980px;                 /* wider card */
-  margin: 2.5rem auto !important;   /* center the card itself */
-  padding: 1.5rem;
-  background:#fff;
-  border-top:4px solid var(--accent);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.05);
-  text-align: center;
-}
-
-#public-calendar .cal-frame {
-  display: grid;                    /* grid makes centering simple */
-  place-items: center;              /* centers children both ways */
   width: 100%;
+  max-width: 900px;         /* wide on desktop */
 }
 
-#public-calendar .cal-inner {
-  width: min(900px, 100%);          /* nice wide desktop width */
-  margin-inline: auto !important;   /* hard center */
-}
-
-/* Google injects fixed width; override it */
 #public-calendar iframe {
-  width: 100% !important;           /* fill the centered inner box */
+  width: 100% !important;
   height: 520px;
   border: 0;
   display: block;
-  margin: 0 auto !important;        /* belt + suspenders */
-  float: none !important;
+  margin: 0 auto;
 }
 
-/* Mobile tweaks */
 @media (max-width: 600px) {
-  #public-calendar { padding: 1rem; }
+  #public-calendar { padding: 1.25rem; }
   #public-calendar iframe { height: 460px; }
 }
