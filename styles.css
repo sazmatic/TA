@@ -669,29 +669,41 @@ header .site-info p:nth-of-type(2) {
     font-size: 1.3rem;
     line-height: 1.2;
   }
-#public-calendar {
-  max-width: 950px; /* match your other boxes */
-  margin: 3rem auto;
+/* Calendar card matches your other sections and stays centered */
+#public-calendar.card {
+  max-width: 950px;          /* same width as Negotiation Updates */
+  margin: 3rem auto;         /* centers the whole card */
   padding: 2rem;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   border-top: 4px solid var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;        /* center the heading only */
 }
 
-#public-calendar h2 {
+#public-calendar.card h2 {
   font-size: 1.6rem;
   color: var(--primary);
-  margin-bottom: 1.5rem;
-  text-align: center;
+  margin: 0 0 1rem 0;
 }
 
-#public-calendar iframe {
-  display: block;
-  margin: 0 auto;
-  width: 100% !important;   /* override Google inline width */
-  height: 600px;            /* adjust as needed */
-  border: none;
+/* Force the iframe to fill the card and be centered */
+#public-calendar .cal-frame {
+  width: 100%;
+}
+
+#public-calendar .cal-frame iframe {
+  display: block;            /* enables margin centering */
+  margin: 0 auto;            /* center horizontally */
+  width: 100% !important;    /* override Google’s fixed width */
+  height: 520px;             /* adjust as needed */
+  border: 0;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Mobile tweak so it doesn’t feel huge */
+@media (max-width: 480px) {
+  #public-calendar.card { padding: 1.25rem; }
+  #public-calendar .cal-frame iframe { height: 460px; }
 }
