@@ -743,3 +743,12 @@ header .site-info p:nth-of-type(2) {
   padding: 0 !important;
   margin-top: 2rem;
 }
+/* Force arrow to always show when closed */
+#tentative-agreements:not([open]) > summary.ta-title::after {
+  content: "▼" !important;
+  font-size: 1.45rem !important;
+  font-weight: 700;
+  margin-left: 6px;
+  line-height: 1;
+  opacity: 1;
+}
