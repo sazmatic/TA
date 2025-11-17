@@ -293,127 +293,84 @@ main {
     font-size: 0.85rem;
   }
 } /* <--- this bracket was missing in your CSS */
-
-/* Tentative Agreements header styling */
-#tentative-agreements summary {
+/* Tentative Agreements – clean button + arrow */
+details#tentative-agreements {
+  max-width: 950px;
+  margin: 24px auto 0;
   padding: 0;
-  border: none;
-}
-
-.ta-summary-wrapper {
-  background-color: var(--accent);
-  color: var(--primary-dark);
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 1rem 2rem;
   text-align: center;
-  border-radius: 10px;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
-.ta-summary-wrapper::after {
-  content: "▼";
-  margin-left: 0.75rem;
-  font-size: 1rem;
-  color: var(--primary-dark);
-  transition: transform 0.3s ease;
-}
-
-#tentative-agreements[open] .ta-summary-wrapper::after {
-  transform: rotate(180deg);
-}
-.ta-title {
-  background-color: var(--accent);
-  color: var(--primary-dark);
-  font-size: 1.1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  display: flex;
+/* Turn the summary into a pill button */
+details#tentative-agreements > summary.ta-title {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  flex-wrap: wrap;
-  text-align: center;
-}
 
-.ta-icon,
-.ta-label,
-.ta-arrow {
-  display: inline-block;
-}
-
-#tentative-agreements details {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-}
-
-#tentative-agreements summary {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--primary);
-  cursor: pointer;
-  list-style: none;
-  position: relative;
-}
-
-#tentative-agreements summary::marker,
-#tentative-agreements summary::-webkit-details-marker {
-  display: none;
-}
-
-.ta-box {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #eee;
-  color: var(--text);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-#tentative-agreements summary.ta-title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--primary);
-  padding: 1.2rem;
-  background-color: var(--accent);
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  list-style: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-#tentative-agreements summary::-webkit-details-marker {
-  display: none;
-}
-
-#tentative-agreements[open] summary.ta-title::after {
-  content: "▲";
-  float: right;
+  background: var(--accent);
   color: var(--primary-dark);
-  margin-left: 1rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.7rem;
+  border-radius: 999px;        /* pill shape */
+  border: 2px solid var(--primary-dark);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  margin: 0 auto 1.2rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-#tentative-agreements > summary.ta-title::after {
-  content: "▾";
-  font-size: 1.45rem;   /* bigger arrow */
-  font-weight: 700;
-  line-height: 1;
-  margin-left: 6px;
-  transition: transform .2s ease;
+/* Check icon on the left */
+details#tentative-agreements > summary.ta-title::before {
+  content: "✔";
+  font-size: 0.95rem;
 }
-#tentative-agreements[open] > summary.ta-title::after {
+
+/* ONE big arrow that rotates */
+details#tentative-agreements > summary.ta-title::after {
+  content: "▼";
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  margin-left: 10px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+/* Rotate when open */
+details#tentative-agreements[open] > summary.ta-title::after {
   transform: rotate(180deg);
+}
+
+/* Hover/focus = clear button feedback */
+details#tentative-agreements > summary.ta-title:hover,
+details#tentative-agreements > summary.ta-title:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  background: #f2b946;
+}
+
+/* Inner TA cards */
+details#tentative-agreements .ta-article {
+  text-align: left;
+  background: var(--white);
+  border-top: 6px solid var(--accent);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin: 12px 8px 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* All summaries in TA area show pointer cursor */
+details#tentative-agreements summary {
+  cursor: pointer;
 }
 /* Intro container */
 #site-intro {
