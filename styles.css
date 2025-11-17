@@ -750,3 +750,11 @@ header .site-info p:nth-of-type(2) {
 #tentative-agreements summary {
   cursor: pointer;
 }
+  /* Clean background behind button */
+#tentative-agreements {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-top: 2rem;
+}
