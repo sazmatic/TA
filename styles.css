@@ -704,3 +704,37 @@ header .site-info p:nth-of-type(2) {
   #public-calendar { padding: 1.25rem; }
   #public-calendar iframe { height: 460px; max-width: 100%; }
 }
+
+/* Make TA button feel like a clickable button */
+#tentative-agreements > summary.ta-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+
+  background: var(--accent);
+  color: var(--primary-dark);
+  padding: .9rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+
+  border: 2px solid var(--primary-dark);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all .25s ease;
+}
+
+/* Hover + Focus = button feedback */
+#tentative-agreements > summary.ta-title:hover,
+#tentative-agreements > summary.ta-title:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+  background: #f2b946; /* slightly richer gold on hover */
+}
+
+/* When it's open, make it look active */
+#tentative-agreements[open] > summary.ta-title {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  background: #dba743;
+}
