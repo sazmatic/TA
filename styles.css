@@ -103,17 +103,6 @@ header {
   display: none;
 }
 
-#tentative-agreements summary::after {
-  content: "▼";
-  font-size: 1rem;
-  color: var(--accent);
-  transition: transform 0.3s ease;
-}
-
-#tentative-agreements[open] summary::after {
-  transform: rotate(180deg);
-}
-
 #button-list {
   margin-top: 1.5rem;
   display: flex;
@@ -380,17 +369,6 @@ main {
 #tentative-agreements summary::marker,
 #tentative-agreements summary::-webkit-details-marker {
   display: none;
-}
-
-#tentative-agreements summary::after {
-  content: "▼";
-  float: right;
-  color: var(--accent);
-  transition: transform 0.3s ease;
-}
-
-#tentative-agreements[open] summary::after {
-  transform: rotate(180deg);
 }
 
 .ta-box {
@@ -684,12 +662,6 @@ header .site-info p:nth-of-type(2) {
 #tentative-agreements > summary.ta-title::before {
   content: "✔";
   font-size: 0.95rem;
-}
-
-#tentative-agreements > summary.ta-title::after {
-  content: "▾";
-  font-size: 0.95rem;
-  transition: transform 0.2s ease;
 }
 
 /* Hover/focus = clear button feedback */
