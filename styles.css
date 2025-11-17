@@ -532,40 +532,6 @@ main {
 .ta-content p:first-child { margin-top: 0; }
 .ta-content p:last-child  { margin-bottom: 0; }
 
-/* ===== TA PILL (centered, single arrow) – FINAL OVERRIDES ===== */
-#tentative-agreements{
-  max-width: 950px;
-  margin: 16px auto;
-  padding: 0;
-  text-align: center;               /* centers inline content (the pill) */
-  background: transparent;
-  box-shadow: none;
-  border-radius: 0;
-}
-
-/* Kill all native/custom arrows elsewhere */
-#tentative-agreements summary::-webkit-details-marker{ display:none; }
-#tentative-agreements summary::marker{ content:""; }
-#tentative-agreements summary::after{ content:none !important; }
-
-/* The pill itself */
-#tentative-agreements > summary.ta-title{
-  display: inline-flex;             /* shrink to content so centering works */
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-
-  background: var(--accent);
-  color: var(--primary-dark);
-  font-weight: 700;
-  font-size: 1.15rem;
-  padding: .75rem 1.25rem;
-  border-radius: 999px;             /* pill shape */
-  margin: 0 auto 1rem;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
 /* check and single arrow we control */
 #tentative-agreements > summary.ta-title::before{
   content:"✔";
