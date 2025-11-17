@@ -760,3 +760,19 @@ header .site-info p:nth-of-type(2) {
   content: "▲" !important;
   color: var(--primary-dark) !important;
 }
+
+/* FINAL — Large rotating arrow for the TA button */
+#tentative-agreements > summary.ta-title::after {
+  content: "▼" !important;
+  font-size: 1.6rem !important;
+  font-weight: 900;
+  color: var(--primary-dark) !important;
+  margin-left: 10px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+/* Rotate when open */
+#tentative-agreements[open] > summary.ta-title::after {
+  transform: rotate(180deg);
+}
