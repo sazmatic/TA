@@ -426,11 +426,16 @@ main {
   margin-left: 1rem;
 }
 
-#tentative-agreements summary.ta-title::after {
-  content: "▼";
-  float: right;
-  color: var(--primary-dark);
-  margin-left: 1rem;
+#tentative-agreements > summary.ta-title::after {
+  content: "▾";
+  font-size: 1.45rem;   /* bigger arrow */
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 6px;
+  transition: transform .2s ease;
+}
+#tentative-agreements[open] > summary.ta-title::after {
+  transform: rotate(180deg);
 }
 /* Intro container */
 #site-intro {
