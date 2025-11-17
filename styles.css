@@ -744,3 +744,19 @@ header .site-info p:nth-of-type(2) {
   line-height: 1;
   opacity: 1;
 }
+/* FINAL override to make the arrow visible and large */
+#tentative-agreements > summary.ta-title::after {
+  content: "▼" !important;
+  font-size: 1.55rem !important;
+  font-weight: 900;
+  color: var(--primary-dark) !important; /* makes it visible */
+  margin-left: 8px;
+  line-height: 1;
+  opacity: 1;
+}
+
+/* When open, flip it to an up arrow */
+#tentative-agreements[open] > summary.ta-title::after {
+  content: "▲" !important;
+  color: var(--primary-dark) !important;
+}
