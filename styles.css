@@ -837,19 +837,6 @@ header .site-info p:nth-of-type(2) {
   color: white !important;
 }
 
-/* "From the nurses at the table!" pop tag */
-#header-tagline {
-  display: inline-block;
-  margin-top: 0.45rem;
-  padding: 0.35rem 0.95rem;
-  background: var(--white);
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--primary-dark) !important;
-  border: 1px solid rgba(0,0,0,0.12);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-}
 /* FINAL OVERRIDE — force professional white text + proper badge colors */
 header .site-info h1 {
   color: white !important;
@@ -862,16 +849,6 @@ header .site-info p:nth-of-type(2) {
   color: white !important;
   border-radius: 999px;
   font-weight: 600;
-}
-
-/* From the nurses at the table bubble */
-#header-tagline {
-  background: white !important;
-  color: var(--primary-dark) !important;
-  border-radius: 999px;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid rgba(0,0,0,0.12);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
 
 /* BLUE styling only where we actually want it */
@@ -944,4 +921,13 @@ header .site-info p:nth-of-type(2) {
 /* Force "From the nurses at the table!" text to be white */
 #header-tagline {
   color: #ffffff !important;
+}
+/* FINAL: "From: Nurses at the table" pill */
+#header-tagline {
+  background: #efc056 !important;   /* orange */
+  color: #ffffff !important;        /* white text */
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid #c99724;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
