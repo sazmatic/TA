@@ -794,3 +794,38 @@ header .site-info p:nth-of-type(2) {
   font-size: 0.85rem;
   letter-spacing: 0.01em;
 }
+/* RESET header subtitles (remove gray boxes) */
+header .site-info p {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  display: block;
+}
+
+/* Make both subtitle lines white */
+header .site-info p:nth-of-type(1),
+header .site-info p:nth-of-type(2) {
+  color: #ffffff !important;
+}
+
+/* Tagline pill under the title */
+#header-tagline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0.35rem;
+  margin-bottom: 0.15rem;
+  padding: 0.35rem 0.9rem;
+
+  background: #2f6cc6;          /* blue pill */
+  color: #ffffff !important;    /* WHITE text */
+
+  border-radius: 999px;
+  border: 1px solid #1f4fa1;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+}
