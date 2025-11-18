@@ -705,3 +705,41 @@ header {
     text-align: center;
   }
 }
+/* Premium call-out tagline under the header title */
+#header-tagline {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  margin-top: 0.45rem;
+
+  background: var(--accent);
+  color: var(--primary-dark);
+  border-radius: 999px;
+
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+
+  border: 2px solid var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+
+  /* pop-up animation */
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  animation: headerTagPop 0.45s ease-out 0.2s forwards;
+}
+
+/* pop-up keyframes */
+@keyframes headerTagPop {
+  60% { opacity: 1; transform: translateY(0) scale(1.05); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Center the badge on mobile */
+@media (max-width: 600px) {
+  #header-tagline {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
