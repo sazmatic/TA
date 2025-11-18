@@ -900,3 +900,12 @@ header .site-info p:nth-of-type(2) {
   border: 1px solid rgba(0,0,0,0.12);
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
+/* Make "From the nurses at the table!" orange */
+#header-tagline {
+  background: var(--accent) !important;   /* your orange/gold */
+  color: var(--primary-dark) !important;  /* dark navy text */
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
