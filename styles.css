@@ -678,9 +678,7 @@ header {
   .site-info h1 {
     margin-bottom: 0.1rem;
   }
-
-
-
+}
 @keyframes taglinePop {
   60% { opacity: 1; transform: translateY(0) scale(1.06); }
   100% { opacity: 1; transform: translateY(0) scale(1); }
