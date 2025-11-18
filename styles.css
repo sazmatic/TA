@@ -465,3 +465,33 @@ footer {
   margin-top: 4rem;
   font-size: 0.9rem;
 }
+/* Make the Tentative Agreement button feel clickable */
+#tentative-agreements > summary.ta-title {
+  position: relative;
+  animation: subtlePulse 2.5s ease-in-out infinite;
+}
+
+/* Bounce the arrow slightly to suggest interactivity */
+#tentative-agreements > summary.ta-title::after {
+  animation: arrowBounce 1.6s ease-in-out infinite;
+}
+
+/* Stop the animations once it is opened (so it's not annoying) */
+#tentative-agreements[open] > summary.ta-title,
+#tentative-agreements[open] > summary.ta-title::after {
+  animation: none !important;
+}
+
+/* Glow animation */
+@keyframes subtlePulse {
+  0% { box-shadow: 0 0 6px rgba(239, 192, 86, 0.25); }
+  50% { box-shadow: 0 0 16px rgba(239, 192, 86, 0.5); }
+  100% { box-shadow: 0 0 6px rgba(239, 192, 86, 0.25); }
+}
+
+/* Arrow bounce animation */
+@keyframes arrowBounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+  100% { transform: translateY(0); }
+}
