@@ -829,3 +829,85 @@ header .site-info p:nth-of-type(2) {
   font-size: 0.85rem;
   letter-spacing: 0.01em;
 }
+/* ==== PROFESSIONAL HEADER LOOK ================================== */
+
+/* Keep the header info stacked neatly with small gaps */
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Main title: clean white with a subtle underline that matches */
+header .site-info h1 {
+  color: #ffffff !important;
+}
+
+header .site-info h1::after {
+  background-color: rgba(255,255,255,0.55) !important;
+}
+
+/* FROM: Nurses at the table – gold pill with white text */
+#header-tagline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0.3rem;
+  padding: 0.3rem 0.95rem;
+
+  background: #efc056;           /* gold */
+  color: #ffffff !important;     /* white text */
+  border-radius: 999px;
+  border: 1px solid #c99724;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* First subtitle: CHE & Teamsters Local 2024 – navy pill */
+header .site-info p:nth-of-type(1) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.2rem 0.9rem;
+  margin-top: 0.25rem;
+
+  background: rgba(8, 32, 63, 0.65);   /* deep navy, slightly transparent */
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.35);
+
+  color: #ffffff !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Second subtitle: Tentative Agreements & Updates – clean text line */
+header .site-info p:nth-of-type(2) {
+  margin-top: 0.25rem;
+  padding: 0;
+  background: none !important;
+  border: none !important;
+
+  color: rgba(255,255,255,0.94) !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Mobile: center the header text and pills */
+@media (max-width: 600px) {
+  header .site-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  header .site-info p:nth-of-type(1),
+  #header-tagline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
