@@ -768,3 +768,32 @@ header {
     margin-top: 6px;
   }
 }
+/* FINAL CLEANUP: Center the entire mobile header layout */
+@media (max-width: 600px) {
+
+  .header-flex {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.75rem;
+  }
+
+  .site-info {
+    text-align: center !important;
+  }
+
+  /* Center underline width so it matches the title in the middle */
+  header .site-info h1::after {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%; /* looks balanced without touching edges */
+  }
+
+  /* Center the tag line and keep it tidy */
+  #header-tagline {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+  }
+}
