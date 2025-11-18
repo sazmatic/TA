@@ -668,42 +668,40 @@ header {
     rgba(32,55,81,1) 100%
   ) !important;
 }
-/* Tagline badge under header – compact + pop-up */
+/* Premium Call-Out Tagline */
 #header-tagline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  margin-top: 0.5rem;
 
-  margin-top: 0.45rem;
-  padding: 0.25rem 0.9rem;
-
-  background: #ffffff;
+  background: var(--accent);
   color: var(--primary-dark);
-  border-radius: 999px;
-  font-size: 0.85rem;
+  border-radius: 12px;
+
+  font-size: 0.88rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
 
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  border: 2px solid var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
 
-  /* pop-up animation */
+  /* animation */
   opacity: 0;
-  transform: translateY(8px) scale(0.96);
-  animation: headerTagPop 0.45s ease-out 0.2s forwards;
+  transform: translateY(10px) scale(0.95);
+  animation: popBadge 0.45s ease-out 0.2s forwards;
 }
 
-/* pop-up keyframes */
-@keyframes headerTagPop {
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+/* Slight playful pop */
+@keyframes popBadge {
+  60% { opacity: 1; transform: translateY(0) scale(1.05); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
-
-/* keep it nicely centered on small screens */
+/* Fix alignment based on screen size */
 @media (max-width: 600px) {
   #header-tagline {
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 }
