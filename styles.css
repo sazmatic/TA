@@ -900,6 +900,61 @@ header .site-info p:nth-of-type(2) {
   border: 1px solid rgba(0,0,0,0.12);
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
+
+/* BLUE styling only where we actually want it */
+
+/* Tentative Agreements main button */
+#tentative-agreements > summary.ta-title {
+  background: #2f6cc6;           /* rich blue */
+  color: #ffffff;
+  border: 2px solid #1f4fa1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* Hover/open states */
+#tentative-agreements > summary.ta-title:hover {
+  background: #3b7df0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+}
+#tentative-agreements[open] > summary.ta-title {
+  background: #2657a3;
+}
+
+/* Card top strips in blue instead of gold */
+.ta-article {
+  border-top-color: #2f6cc6 !important;
+}
+
+/* Section bars in blue */
+#negotiation-updates,
+#faq-section,
+#public-calendar {
+  border-top-color: #2f6cc6 !important;
+}
+
+/* Header: keep everything professional navy + white */
+header .site-info h1 {
+  color: #ffffff !important;
+}
+header .site-info h1::after {
+  background-color: rgba(255,255,255,0.55) !important; /* white-ish underline, not blue */
+}
+header .site-info p:nth-of-type(2) {
+  background: rgba(255,255,255,0.18) !important;
+  border: 1px solid rgba(255,255,255,0.35) !important;
+  color: #ffffff !important;
+}
+
+/* From the nurses at the table bubble */
+#header-tagline {
+  background: #ffffff !important;
+  color: #142535 !important;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
 /* Make "From the nurses at the table!" orange */
 #header-tagline {
   background: var(--accent) !important;   /* your orange/gold */
