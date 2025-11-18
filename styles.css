@@ -644,3 +644,18 @@ footer {
     margin-top: 0.35rem;
   }
 }
+/* Keep "Official Negotiation Updates" on one line */
+@media (max-width: 600px) {
+
+  .site-info h1 {
+    font-size: 1.32rem !important;
+    white-space: nowrap;     /* prevents text wrapping */
+    line-height: 1.15;
+  }
+
+  /* Optional: Make underline match the new width */
+  header .site-info h1::after {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
