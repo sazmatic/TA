@@ -495,3 +495,15 @@ footer {
   50% { transform: translateY(3px); }
   100% { transform: translateY(0); }
 }
+/* Make intro shorter and lighter on mobile */
+@media (max-width: 600px) {
+  #site-intro {
+    margin: 1.2rem auto;
+    padding: 1rem 1.1rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    max-height: 280px;
+    overflow-y: auto; /* allows scrolling if needed */
+    border-radius: 10px;
+  }
+}
