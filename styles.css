@@ -77,20 +77,6 @@ header {
   color: rgba(255,255,255,0.92);
 }
 
-/* Tag line: Tentative Agreements & Updates */
-.site-info p:nth-of-type(2) {
-  margin-top: 0.6rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 0.35rem 1rem;
-  background: rgba(239,192,86,0.15);
-  border: 1px solid rgba(239,192,86,0.35);
-  border-radius: 999px;
-  display: inline-block;
-  color: var(--accent);
-  letter-spacing: 0.02em;
-}
-
 /* Extra polish on title */
 header .site-info h1 {
   font-size: clamp(1.8rem, 2.2vw + 1rem, 2.4rem);
@@ -867,3 +853,28 @@ header .site-info h1 {
   color: var(--white) !important;
 }
 Tentative Agreements & Updates
+/* Fix badge + tagline color after accent update */
+header .site-info p:nth-of-type(2) {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 999px;
+  color: white !important;
+}
+
+/* "From the nurses at the table!" pop tag */
+#header-tagline {
+  display: inline-block;
+  margin-top: 0.45rem;
+  padding: 0.35rem 0.95rem;
+  background: var(--white);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-dark) !important;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
