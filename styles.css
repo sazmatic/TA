@@ -668,3 +668,25 @@ header {
     rgba(32,55,81,1) 100%
   ) !important;
 }
+/* Tagline under the Tentative Agreement button */
+#ta-tagline {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: var(--accent);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin: 0 auto 1.2rem;
+  width: fit-content;
+  opacity: 0;
+  transform: translateY(8px);
+  border: 2px solid var(--primary-dark);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Fade-in animation after load */
+body.loaded #ta-tagline {
+  opacity: 1;
+  transform: translateY(0);
+}
