@@ -862,4 +862,7 @@ header {
 #tentative-agreements > summary.ta-title {
   transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
-
+/* Fix: Title should NOT use accent color */
+header .site-info h1 {
+  color: var(--white) !important;
+}
