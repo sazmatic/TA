@@ -831,3 +831,28 @@ header {
     margin-right: auto;
   }
 }
+/* Blue, inviting Tentative Agreements button */
+#tentative-agreements > summary.ta-title {
+  background: #2f6cc6; /* rich blue */
+  color: white;
+  border: 2px solid #1f4fa1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* Hover state */
+#tentative-agreements > summary.ta-title:hover {
+  background: #3b7df0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+}
+
+/* Open state */
+#tentative-agreements[open] > summary.ta-title {
+  background: #2657a3;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Arrow stays dark navy */
+#tentative-agreements > summary.ta-title::after {
+  color: #0d2247;
+}
