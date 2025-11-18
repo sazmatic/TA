@@ -877,3 +877,26 @@ header .site-info p:nth-of-type(2) {
   border: 1px solid rgba(0,0,0,0.12);
   box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
+/* FINAL OVERRIDE — force professional white text + proper badge colors */
+header .site-info h1 {
+  color: white !important;
+}
+
+/* Tentative Agreements & Updates pill */
+header .site-info p:nth-of-type(2) {
+  background: rgba(255,255,255,0.18) !important;
+  border: 1px solid rgba(255,255,255,0.35) !important;
+  color: white !important;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* From the nurses at the table bubble */
+#header-tagline {
+  background: white !important;
+  color: var(--primary-dark) !important;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
