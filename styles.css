@@ -655,31 +655,7 @@ header {
   ) !important;
 }
 /* Tagline pill directly under the main title */
-#header-tagline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 
-  margin-top: 0.3rem;
-  margin-bottom: 0.15rem;
-
-  padding: 0.28rem 0.9rem;
-
-  background: var(--accent);
-  color: var(--primary-dark);
-  border-radius: 999px;
-
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-
-  opacity: 0;
-  transform: translateY(6px) scale(0.96);
-  animation: headerTaglinePop 0.35s ease-out 0.18s forwards;
-}
 
 /* Simple pop-up animation */
 @keyframes headerTaglinePop {
@@ -703,10 +679,7 @@ header {
     margin-bottom: 0.1rem;
   }
 
-  #header-tagline {
-    display: inline-flex;
-  }
-}
+
 
 @keyframes taglinePop {
   60% { opacity: 1; transform: translateY(0) scale(1.06); }
@@ -946,21 +919,25 @@ header .site-info p:nth-of-type(2) {
   color: #ffffff !important;
 }
 
-/* From the nurses at the table bubble */
+/* FINAL: "From the nurses at the table!" bubble – orange */
 #header-tagline {
-  background: #ffffff !important;
-  color: #142535 !important;
-  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0.3rem;
+  margin-bottom: 0.15rem;
+
   padding: 0.35rem 0.9rem;
-  border: 1px solid rgba(0,0,0,0.12);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-}
-/* Make "From the nurses at the table!" orange */
-#header-tagline {
-  background: var(--accent) !important;   /* your orange/gold */
-  color: var(--primary-dark) !important;  /* dark navy text */
+
+  background: #efc056 !important;     /* orange/gold */
+  color: #142535 !important;          /* dark navy text */
   border-radius: 999px;
-  padding: 0.35rem 0.9rem;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+
   border: 1px solid rgba(0,0,0,0.12);
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
