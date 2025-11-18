@@ -693,101 +693,7 @@ header {
     text-align: center;
   }
 }
-/* SIMPLIFY HEADER ON MOBILE – less going on at the top */
-@media (max-width: 600px) {
 
-  /* Hide the extra small chip in the header */
-  .site-info p:nth-of-type(2) {
-    display: none !important;
-  }
-
-  /* Tighten header padding and spacing */
-  header {
-    padding: 1.1rem 0 0.9rem;
-  }
-
-  .header-flex {
-    gap: 0.75rem;
-  }
-
-  /* Make the tagline pill a bit smaller but still “poppy” */
-  #header-tagline {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.75rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.2rem;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-  }
-
-  /* Slightly slimmer underline so the stack feels lighter */
-  header .site-info h1::after {
-    height: 3px;
-    margin-top: 6px;
-  }
-}
-/* FINAL CLEANUP: Center the entire mobile header layout */
-@media (max-width: 600px) {
-
-  .header-flex {
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    gap: 0.75rem;
-  }
-
-  .site-info {
-    text-align: center !important;
-  }
-
-  /* Center underline width so it matches the title in the middle */
-  header .site-info h1::after {
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%; /* looks balanced without touching edges */
-  }
-
-  /* Center the tag line and keep it tidy */
-  #header-tagline {
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-flex;
-  }
-}
-/* Center text but keep logo left on mobile */
-@media (max-width: 600px) {
-
-  .header-flex {
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    gap: 0.85rem;
-  }
-
-  .logo {
-    margin-right: auto; /* keeps it anchored left */
-    width: 92px;
-  }
-
-  .site-info {
-    flex-grow: 1;
-    text-align: center !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Center underline */
-  header .site-info h1::after {
-    margin: 6px auto 0;
-    width: 90%;
-  }
-
-  #header-tagline {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 /* Blue, inviting Tentative Agreements button */
 #tentative-agreements > summary.ta-title {
   background: #2f6cc6; /* rich blue */
@@ -823,32 +729,6 @@ header {
 header .site-info h1 {
   color: var(--white) !important;
 }
-/* Fix badge + tagline color after accent update */
-header .site-info p:nth-of-type(2) {
-  margin-top: 0.6rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 0.35rem 1rem;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 999px;
-  color: white !important;
-}
-
-/* FINAL OVERRIDE — force professional white text + proper badge colors */
-header .site-info h1 {
-  color: white !important;
-}
-
-/* Tentative Agreements & Updates pill */
-header .site-info p:nth-of-type(2) {
-  background: rgba(255,255,255,0.18) !important;
-  border: 1px solid rgba(255,255,255,0.35) !important;
-  color: white !important;
-  border-radius: 999px;
-  font-weight: 600;
-}
-
 /* BLUE styling only where we actually want it */
 
 /* Tentative Agreements main button */
@@ -893,64 +773,24 @@ header .site-info p:nth-of-type(2) {
   border: 1px solid rgba(255,255,255,0.35) !important;
   color: #ffffff !important;
 }
-
-/* FINAL: "From the nurses at the table!" bubble – orange */
+/* Clean tagline pill under the main title */
 #header-tagline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  margin-top: 0.3rem;
-  margin-bottom: 0.15rem;
-
-  padding: 0.35rem 0.9rem;
-
-  background: #efc056 !important;     /* orange/gold */
-  color: #142535 !important;          /* dark navy text */
-  border-radius: 999px;
-
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-
-  border: 1px solid rgba(0,0,0,0.12);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-}
-/* Force "From the nurses at the table!" text to be white */
-#header-tagline {
-  color: #ffffff !important;
-}
-/* FINAL: "From: Nurses at the table" pill */
-#header-tagline {
-  background: #efc056 !important;   /* orange */
-  color: #ffffff !important;        /* white text */
-  border-radius: 999px;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid #c99724;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-}
-/* FINAL OVERRIDE: "FROM: Nurses at the table" pill */
-#header-tagline {
-  background: #efc056 !important;  /* orange */
-  color: #ffffff !important;       /* white text */
-  border-radius: 999px;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid #c99724;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-}
-/* FINAL HARD OVERRIDE FOR TAGLINE */
-#header-tagline {
-  all: unset;                 /* wipe any previous styles */
-  display: inline-block;
-  padding: 0.35rem 0.9rem;
   margin-top: 0.35rem;
+  margin-bottom: 0.15rem;
+  padding: 0.35rem 0.9rem;
 
-  background: #efc056;        /* orange/gold */
-  color: #ffffff;             /* WHITE text */
+  background: #2f6cc6;          /* or #efc056 if you want gold */
+  color: #ffffff !important;    /* WHITE text */
+
   border-radius: 999px;
-  border: 1px solid #c99724;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  border: 1px solid #1f4fa1;
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
 }
