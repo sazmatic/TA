@@ -659,12 +659,12 @@ footer {
     margin-top: 6px;
   }
 }
-/* Subtle premium gradient overlay for header */
+/* Subtle premium gradient (cleaner — not foggy or blurry) */
 header {
   background: linear-gradient(
     180deg,
-    rgba(255,255,255,0.10) 0%,
-    rgba(32,55,81,1) 15%,
+    rgba(255,255,255,0.04) 0%,
+    rgba(32,55,81,1) 8%,
     rgba(32,55,81,1) 100%
-  );
+  ) !important;
 }
