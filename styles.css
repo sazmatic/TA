@@ -236,8 +236,8 @@ header .site-info h1::after {
 
 /* Check on the left */
 #tentative-agreements > summary.ta-title::before {
-  content: "✔";
-  font-size: 0.95rem;
+  content: "🤝";
+  font-size: 1.2rem;
 }
 
 /* One big arrow that rotates */
