@@ -929,3 +929,12 @@ header .site-info p:nth-of-type(2) {
   border: 1px solid #c99724;
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
+/* FINAL OVERRIDE: "FROM: Nurses at the table" pill */
+#header-tagline {
+  background: #efc056 !important;  /* orange */
+  color: #ffffff !important;       /* white text */
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid #c99724;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
