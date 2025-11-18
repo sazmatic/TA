@@ -7,12 +7,29 @@
   --white: #ffffff;
 }
 
+/* Base */
 body {
   font-family: system-ui, sans-serif;
   background-color: var(--background);
   color: var(--text);
   margin: 0;
 }
+
+html, body {
+  height: 100%;
+}
+
+#page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* HEADER =================================================== */
 
 header {
   background: var(--primary);
@@ -21,7 +38,6 @@ header {
   border-bottom: 6px solid var(--accent);
 }
 
-/* Layout */
 .header-flex {
   max-width: 1100px;
   margin: auto;
@@ -38,7 +54,7 @@ header {
   filter: drop-shadow(0 0 4px rgba(0,0,0,0.3));
 }
 
-/* Text Block Styling */
+/* Text Block */
 .site-info {
   text-align: left;
   max-width: 550px;
@@ -74,64 +90,86 @@ header {
   color: var(--accent);
   letter-spacing: 0.02em;
 }
-/* Mobile responsiveness */
+
+/* Extra polish on title */
+header .site-info h1 {
+  font-size: clamp(1.8rem, 2.2vw + 1rem, 2.4rem);
+  line-height: 1.1;
+  position: relative;
+}
+
+header .site-info h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px 0 0;
+  background-color: var(--accent);
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+/* Make header text centered on very small screens */
 @media (max-width: 600px) {
   .header-flex {
     flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.2rem 0;
+  }
+
+  .site-info {
     text-align: center;
   }
 
-@media (max-width: 600px) {
   .logo {
+    width: 95px;
     max-height: 120px;
   }
 
-  .header-flex {
-    flex-direction: column;
-    gap: 0.5rem; /* reduce spacing between logo and title */
-    padding: 1rem 0; /* reduce padding */
-  }
-
   .site-info h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 
   .site-info p {
     font-size: 1rem;
   }
+}
 
-  .site-info small {
-    font-size: 0.85rem;
+/* SITE INTRO =================================================== */
+
+#site-intro {
+  max-width: 900px;
+  margin: 2rem auto 1.5rem;
+  padding: 1.6rem 2rem;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  color: var(--primary-dark);
+  text-align: left;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+#site-intro .intro-box p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  #site-intro {
+    margin: 1.25rem 1rem;
+    padding: 1.25rem 1.1rem;
   }
 }
-#button-list {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
 
-#button-list button {
-  background-color: var(--accent);
-  color: var(--primary-dark);
-  font-weight: bold;
-  padding: 0.8rem 1.4rem;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-#button-list button:hover {
-  background-color: #f1b935;
-  transform: scale(1.05);
-}
+/* TA ARTICLE CARD ============================================== */
 
 .ta-article {
   background-color: var(--white);
-  border-top: 6px solid var(--accent); /* yellow strip on top */
+  border-top: 6px solid var(--accent);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -140,9 +178,9 @@ header {
   line-height: 1.7;
   transition: all 0.3s ease;
 }
-}
 
-.ta-header h2 {
+.ta-header h2,
+.ta-header h3 {
   color: var(--primary);
   margin-bottom: 0.5rem;
 }
@@ -163,6 +201,131 @@ header {
 .ta-content li {
   margin-bottom: 0.5rem;
 }
+
+/* MAIN TA DROPDOWN BUTTON ======================================= */
+
+#tentative-agreements {
+  max-width: 950px;
+  margin: 24px auto 0;
+  padding: 0;
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Turn the summary into a pill button */
+#tentative-agreements > summary.ta-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.7rem;
+  border-radius: 999px;
+  border: 2px solid var(--primary-dark);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  margin: 0 auto 1.2rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* Check on the left */
+#tentative-agreements > summary.ta-title::before {
+  content: "✔";
+  font-size: 0.95rem;
+}
+
+/* One big arrow that rotates */
+#tentative-agreements > summary.ta-title::after {
+  content: "▼";
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  margin-left: 10px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+/* Rotate when open */
+#tentative-agreements[open] > summary.ta-title::after {
+  transform: rotate(180deg);
+}
+
+/* Hover/focus feedback */
+#tentative-agreements > summary.ta-title:hover,
+#tentative-agreements > summary.ta-title:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  background: #f2b946;
+}
+
+#tentative-agreements[open] > summary.ta-title {
+  box-shadow: 0 3px 8px rgba(0,0,0,0.16);
+  background: #dba743;
+}
+
+/* Inner TA cards inside details */
+#tentative-agreements .ta-article {
+  text-align: left;
+  background: var(--white);
+  border-top: 6px solid var(--accent);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin: 12px 8px 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Any summary in TA area gets pointer cursor */
+#tentative-agreements summary {
+  cursor: pointer;
+}
+
+/* TA heading pill in the MOA card */
+.ta-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.ta-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ta-heading span {
+  display: inline;
+}
+
+.ta-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #d9e8ff;
+  color: #003366;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Subpoints under numbered list */
+.subpoint {
+  margin-left: 2em;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
+
+/* NEGOTIATION UPDATES ========================================== */
 
 #negotiation-updates {
   margin-top: 4rem;
@@ -206,29 +369,8 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
-footer {
-  background-color: var(--primary-dark);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+/* FAQ SECTION ================================================== */
 
-#page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex-grow: 1;
-}
 #faq-section {
   margin-top: 4rem;
   padding: 2rem;
@@ -270,249 +412,11 @@ main {
   font-size: 0.95rem;
 }
 
-/* Fix mobile responsiveness closing tag */
-@media (max-width: 600px) {
-  .header-flex {
-    flex-direction: column;
-    gap: 1rem;
-    tex-align: center;
-    padding: 1rem 0;
-  }
+/* CALENDAR ===================================================== */
 
-  .logo {
-    max-height: 120px;
-    width: 95px;
-  }
-  .site-info {
-    text-align: center;
-  .site-info h1 {
-    font-size: 1.9rem;
-  }
-
-  .site-info p {
-    font-size: 1rem;
-  }
-
-  .site-info small {
-    font-size: 0.85rem;
-  }
-} /* <--- this bracket was missing in your CSS */
-/* Tentative Agreements – clean button + arrow */
-details#tentative-agreements {
-  max-width: 950px;
-  margin: 24px auto 0;
-  padding: 0;
-  text-align: center;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-/* Turn the summary into a pill button */
-details#tentative-agreements > summary.ta-title {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-
-  background: var(--accent);
-  color: var(--primary-dark);
-  font-weight: 800;
-  font-size: 1.1rem;
-  padding: 0.9rem 1.7rem;
-  border-radius: 999px;        /* pill shape */
-  border: 2px solid var(--primary-dark);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
-  margin: 0 auto 1.2rem;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-/* Check icon on the left */
-details#tentative-agreements > summary.ta-title::before {
-  content: "✔";
-  font-size: 0.95rem;
-}
-
-/* ONE big arrow that rotates */
-details#tentative-agreements > summary.ta-title::after {
-  content: "▼";
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--primary-dark);
-  margin-left: 10px;
-  line-height: 1;
-  transition: transform 0.25s ease;
-}
-
-/* Rotate when open */
-details#tentative-agreements[open] > summary.ta-title::after {
-  transform: rotate(180deg);
-}
-
-/* Hover/focus = clear button feedback */
-details#tentative-agreements > summary.ta-title:hover,
-details#tentative-agreements > summary.ta-title:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-  background: #f2b946;
-}
-
-/* Inner TA cards */
-details#tentative-agreements .ta-article {
-  text-align: left;
-  background: var(--white);
-  border-top: 6px solid var(--accent);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin: 12px 8px 0;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-/* All summaries in TA area show pointer cursor */
-details#tentative-agreements summary {
-  cursor: pointer;
-}
-/* Intro container */
-/* Nicer website intro card */
-#site-intro {
-  max-width: 900px;
-  margin: 2rem auto 1.5rem;
-  padding: 1.6rem 2rem;
-  background: #ffffff;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  color: var(--primary-dark);
-  text-align: left;
-  line-height: 1.75;
-  font-size: 1rem;
-}
-}
-/* Inner text styling */
-#site-intro .intro-box p {
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.7;
-}
-
-/* Make sure it breathes nicely on small screens */
-@media (max-width: 600px) {
-  #site-intro {
-    margin: 1.25rem 1rem;
-    padding: 1.25rem 1.1rem;
-  }
-
-  #site-intro::before {
-    left: 1.25rem;
-  }
-}
-.subpoint {
-  margin-left: 2em;        /* pushes the block in */
-  text-indent: -1.5em;     /* pulls first line back so letter sticks out */
-  padding-left: 1.5em;     /* keeps text aligned after letter */
-}
-
-/* main dropdown title (unchanged) */
-.ta-section-title { font-size: 1.2rem; font-weight: 700; }
-
-/* keep title and pill on the same line when space allows */
-.ta-heading {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap; /* lets the pill wrap only on very small screens */
-}
-
-/* hard override any generic h3 span rules that might be making spans block */
-.ta-heading span { display: inline; }
-
-/* the pill */
-.ta-badge{
-  display: inline-flex;        /* stays inline with the title */
-  align-items: center;
-  padding: 2px 8px;
-  border-radius: 999px;        /* pill shape */
-  background: #d9e8ff;
-  color: #003366;
-  font-size: 0.7rem;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-/* Modernize main site title */
-header .site-info h1 {
-  font-weight: 800;
-  font-size: clamp(1.8rem, 2.2vw + 1rem, 2.4rem);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  position: relative;
-}
-
-header .site-info h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  margin: 8px auto 0;
-  background-color: var(--accent);
-  border-radius: 2px;
-  opacity: 0.8;
-}
-
-/* Modernize subheadings */
-header .site-info p:nth-of-type(1) {
-  font-weight: 600;
-  font-size: clamp(1rem, 0.5vw + 0.9rem, 1.15rem);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-header .site-info p:nth-of-type(2) {
-  font-size: clamp(0.9rem, 0.4vw + 0.85rem, 1rem);
-  font-weight: 500;
-  background-color: rgba(239, 192, 86, 0.15);
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  display: inline-block;
-  margin-top: 0.4rem;
-  border: 1px solid rgba(239, 192, 86, 0.35);
-}
-/* Center all major headings */
-.site-info h1,
-.site-info p,
-#tentative-agreements h2,
-#negotiation-updates h2,
-#faq-section h2 {
-  text-align: center;
-}
-
-/* Adjust heading sizes for mobile so they stay on one line */
-@media (max-width: 600px) {
-  .site-info h1 {
-    font-size: 1.5rem; /* smaller for mobile */
-    line-height: 1.2;
-  }
-
-  .site-info p {
-    font-size: 0.95rem;
-  }
-
-  #tentative-agreements h2,
-  #negotiation-updates h2,
-  #faq-section h2 {
-    font-size: 1.3rem;
-    line-height: 1.2;
-  }
-}
 #public-calendar {
   max-width: 980px;
-  margin: 3rem auto;       /* center the card */
+  margin: 3rem auto;
   padding: 2rem;
   background: #fff;
   border-radius: 8px;
@@ -534,7 +438,7 @@ header .site-info p:nth-of-type(2) {
 
 #public-calendar iframe {
   width: 100% !important;
-  max-width: 900px;        /* makes it wide on desktop */
+  max-width: 900px;
   height: 520px;
   border: 0;
   border-radius: 6px;
@@ -542,11 +446,23 @@ header .site-info p:nth-of-type(2) {
 }
 
 @media (max-width: 600px) {
-  #public-calendar { padding: 1.25rem; }
-  #public-calendar iframe { height: 460px; max-width: 100%; }
+  #public-calendar {
+    padding: 1.25rem;
+  }
+
+  #public-calendar iframe {
+    height: 460px;
+    max-width: 100%;
+  }
 }
 
-/* Rotate when open */
-#tentative-agreements[open] > summary.ta-title::after {
-  transform: rotate(180deg);
+/* FOOTER ======================================================= */
+
+footer {
+  background-color: var(--primary-dark);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
 }
