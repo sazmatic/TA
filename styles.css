@@ -594,3 +594,45 @@ footer {
     margin-top: 0.6rem !important;
   }
 }
+/* Compact mobile header with logo left + text right */
+@media (max-width: 600px) {
+
+  .header-flex {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    width: 75px !important;
+    height: auto;
+  }
+
+  .site-info {
+    text-align: left;
+    max-width: 230px;
+    line-height: 1.2;
+  }
+
+  .site-info h1 {
+    font-size: 1.3rem !important;
+    margin: 0;
+  }
+
+  .site-info p:nth-of-type(1) {
+    font-size: 0.9rem !important;
+    margin: 0.25rem 0 0;
+  }
+
+  .site-info p:nth-of-type(2) {
+    font-size: 0.8rem !important;
+    padding: 0.2rem 0.6rem;
+    margin-top: 0.35rem;
+  }
+
+  header {
+    padding: 1rem 0;
+  }
+}
