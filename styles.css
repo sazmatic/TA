@@ -15,44 +15,65 @@ body {
 }
 
 header {
-  background-color: var(--primary);
-  color: var(--accent);
-  padding: 1rem 0;
-  text-align: center;
+  background: var(--primary);
+  color: var(--white);
+  padding: 2.2rem 0;
+  border-bottom: 6px solid var(--accent);
 }
 
+/* Layout */
 .header-flex {
+  max-width: 1100px;
+  margin: auto;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  gap: 1.75rem;
   justify-content: center;
 }
 
+/* Logo */
 .logo {
-  max-height: 120px;
-  width: auto;
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.3));
 }
+
+/* Text Block Styling */
+.site-info {
+  text-align: left;
+  max-width: 550px;
+}
+
+/* Main title */
 .site-info h1 {
   margin: 0;
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--accent);
-  letter-spacing: 0.5px; /* subtle spacing for modern look */
 }
 
-.site-info p {
+/* Subtitle: CHE & Teamsters Local 2024 */
+.site-info p:nth-of-type(1) {
   margin: 0.4rem 0 0;
-  font-weight: 500;
-  font-size: 1rem;
-  color: var(--white);
-  opacity: 0.9; /* softer so it doesn’t shout */
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
 }
 
-.site-info small {
-  color: #ddd;
+/* Tag line: Tentative Agreements & Updates */
+.site-info p:nth-of-type(2) {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  background: rgba(239,192,86,0.15);
+  border: 1px solid rgba(239,192,86,0.35);
+  border-radius: 999px;
+  display: inline-block;
+  color: var(--accent);
+  letter-spacing: 0.02em;
 }
-
 /* Mobile responsiveness */
 @media (max-width: 600px) {
   .header-flex {
@@ -253,16 +274,19 @@ main {
 @media (max-width: 600px) {
   .header-flex {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
+    tex-align: center;
     padding: 1rem 0;
   }
 
   .logo {
     max-height: 120px;
+    width: 95px;
   }
-
+  .site-info {
+    text-align: center;
   .site-info h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 
   .site-info p {
