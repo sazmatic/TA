@@ -668,83 +668,58 @@ header {
     rgba(32,55,81,1) 100%
   ) !important;
 }
-/* Premium Call-Out Tagline */
+/* Tagline pill directly under the main title */
 #header-tagline {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  background: var(--accent);
-  color: var(--primary-dark);
-  border-radius: 12px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.15rem;
 
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-
-  border: 2px solid var(--primary-dark);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-
-  /* animation */
-  opacity: 0;
-  transform: translateY(10px) scale(0.95);
-  animation: popBadge 0.45s ease-out 0.2s forwards;
-}
-
-/* Slight playful pop */
-@keyframes popBadge {
-  60% { opacity: 1; transform: translateY(0) scale(1.05); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-/* Fix alignment based on screen size */
-@media (max-width: 600px) {
-  #header-tagline {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-}
-/* Connected title tagline */
-#header-tagline {
-  display: inline-block;
-  margin-top: 0.35rem;
-  margin-bottom: 0.25rem;
-
-  padding: 0.32rem 0.9rem;
+  padding: 0.28rem 0.9rem;
 
   background: var(--accent);
   color: var(--primary-dark);
   border-radius: 999px;
 
-  font-size: 0.83rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.01em;
 
-  border: 2px solid var(--primary-dark);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 
-  /* Soft linking underline visual */
-  position: relative;
-}
-
-/* small line connecting it to the title */
-#header-tagline::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 38%;
-  height: 3px;
-  background: var(--accent);
-  border-radius: 10px;
-}
-
-/* Animation pop-up */
-#header-tagline {
   opacity: 0;
-  transform: translateY(10px) scale(0.95);
-  animation: taglinePop 0.45s ease-out 0.25s forwards;
+  transform: translateY(6px) scale(0.96);
+  animation: headerTaglinePop 0.35s ease-out 0.18s forwards;
+}
+
+/* Simple pop-up animation */
+@keyframes headerTaglinePop {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* On mobile: remove the gold bar so the pill feels attached to the title */
+@media (max-width: 600px) {
+  header .site-info h1::after {
+    display: none;
+  }
+
+  .site-info {
+    text-align: left;
+  }
+
+  .site-info h1 {
+    margin-bottom: 0.1rem;
+  }
+
+  #header-tagline {
+    display: inline-flex;
+  }
 }
 
 @keyframes taglinePop {
