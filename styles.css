@@ -236,7 +236,7 @@ header .site-info h1::after {
 
 /* Check on the left */
 #tentative-agreements > summary.ta-title::before {
-  content: "🤝";
+  content: "📄";
   font-size: 1.2rem;
 }
 
