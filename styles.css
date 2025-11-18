@@ -938,3 +938,19 @@ header .site-info p:nth-of-type(2) {
   border: 1px solid #c99724;
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
+/* FINAL HARD OVERRIDE FOR TAGLINE */
+#header-tagline {
+  all: unset;                 /* wipe any previous styles */
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  margin-top: 0.35rem;
+
+  background: #efc056;        /* orange/gold */
+  color: #ffffff;             /* WHITE text */
+  border-radius: 999px;
+  border: 1px solid #c99724;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
