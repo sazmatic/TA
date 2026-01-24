@@ -1508,3 +1508,42 @@ header .site-info .tagline-pill {
     pointer-events: none;
   }
 }
+
+/* ===== FIX SCROLL ARROW OVERLAP ===== */
+
+#site-intro {
+  position: relative;
+}
+
+/* Reserve space on the right so text never overlaps the arrow */
+#site-intro .intro-box {
+  position: relative;
+  padding-right: 2.5rem;   /* creates arrow gutter */
+}
+
+/* Right-side down arrow, vertically centered */
+@media (max-width: 600px) {
+  #site-intro .intro-box::after {
+    content: "▾";          /* clean down arrow */
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0,0,0,0.35);
+    font-size: 22px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* Subtle right-side fade to reinforce scroll */
+  #site-intro::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), #ffffff);
+    pointer-events: none;
+  }
+}
