@@ -1285,3 +1285,46 @@ header .site-info .tagline-pill {
     max-width: 100%;
   }
 }
+/* ===== NEGOTIATION UPDATES: WIDE SECTION + FULL-WIDTH CARDS + CENTERED DATE ===== */
+
+#negotiation-updates{
+  max-width: 1200px !important;
+  width: calc(100% - 2rem) !important;
+  margin: 4rem auto 0 !important;
+  padding: 2.5rem !important;
+  box-sizing: border-box;
+}
+
+/* each update card fills the section */
+#negotiation-updates details{
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 1.5rem 0 !important;
+  box-sizing: border-box;
+}
+
+/* center the date text without changing the card width */
+#negotiation-updates summary{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+/* image fills card width (only visible when opened, but won’t affect the closed width) */
+#negotiation-updates img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px){
+  #negotiation-updates{
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    padding: 1.5rem !important;
+  }
+}
