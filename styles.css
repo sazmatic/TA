@@ -1348,6 +1348,42 @@ header .site-info .tagline-pill {
     display: none;
   }
 }
+
+/* ===== SIMPLE SCROLLABLE INTRO ===== */
+
+#site-intro {
+  max-width: 1100px;
+  margin: 1rem auto 1.5rem;
+  padding: 0.75rem 1.25rem;
+
+  background: #ffffff;
+  border-left: 4px solid #2f6cc6;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+
+  max-height: 90px;        /* compact */
+  overflow-y: auto;        /* scroll, no cut-off */
+}
+
+#site-intro p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #444;
+}
+
+/* Mobile: slightly taller but still compact */
+@media (max-width: 600px) {
+  #site-intro {
+    max-height: 120px;
+    padding: 0.75rem 1rem;
+  }
+
+  #site-intro p {
+    font-size: 0.85rem;
+  }
+}
+
 /* Subtle scrollbar (optional but nice) */
 #site-intro::-webkit-scrollbar {
   width: 6px;
