@@ -1348,3 +1348,127 @@ header .site-info .tagline-pill {
     display: none;
   }
 }
+/* Subtle scrollbar (optional but nice) */
+#site-intro::-webkit-scrollbar {
+  width: 6px;
+}
+#site-intro::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+/* ===== SCROLL AFFORDANCE FOR SITE INTRO ===== */
+
+#site-intro {
+  position: relative;
+}
+
+/* Soft fade at bottom to hint more content */
+#site-intro::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), #ffffff);
+  pointer-events: none;
+}
+
+/* ===== CLEAN SCROLL HINT (MOBILE ONLY) ===== */
+
+/* remove any previous hint label */
+#site-intro::before { content: none !important; }
+
+/* keep scrollbar normal (don’t force thick styling) */
+#site-intro {
+  scrollbar-width: auto !important;
+}
+#site-intro::-webkit-scrollbar { width: initial !important; }
+#site-intro::-webkit-scrollbar-thumb { background: initial !important; }
+
+/* subtle hint only on mobile */
+@media (max-width: 600px) {
+  #site-intro {
+    position: relative;
+  }
+
+  /* soft fade at bottom */
+  #site-intro::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 22px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), #ffffff);
+    pointer-events: none;
+  }
+
+  /* tiny chevron cue */
+  #site-intro .intro-box::after {
+    content: "⌄";
+    position: absolute;
+    right: 12px;
+    bottom: 4px;
+    color: rgba(0,0,0,0.35);
+    font-size: 18px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* anchor for the chevron */
+  #site-intro .intro-box {
+    position: relative;
+  }
+}
+/* ===== RIGHT-SIDE SCROLL CUE ===== */
+
+@media (max-width: 600px) {
+
+  /* keep the soft fade */
+  #site-intro::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), #ffffff);
+    pointer-events: none;
+  }
+
+  /* vertical chevron on the right side */
+  #site-intro .intro-box::after {
+    content: "›";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0,0,0,0.35);
+    font-size: 22px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* ensure positioning context */
+  #site-intro {
+    position: relative;
+  }
+  #site-intro .intro-box {
+    position: relative;
+  }
+}
+/* ===== RIGHT-SIDE DOWN SCROLL CUE ===== */
+@media (max-width: 600px) {
+  #site-intro .intro-box::after {
+    content: "⌄" !important;          /* down chevron */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);      /* keep it centered */
+    color: rgba(0,0,0,0.35);
+    font-size: 22px;
+    line-height: 1;
+    pointer-events: none;
+  }
+}
