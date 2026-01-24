@@ -1328,3 +1328,23 @@ header .site-info .tagline-pill {
     padding: 1.5rem !important;
   }
 }
+/* ===== FIX INTRO TEXT CUT-OFF ON MOBILE ===== */
+
+/* Desktop stays compact */
+#site-intro {
+  max-height: 120px;
+  overflow: hidden;
+}
+
+/* Mobile: allow full text, still compact */
+@media (max-width: 600px) {
+  #site-intro {
+    max-height: none;      /* remove hard cap */
+    overflow: visible;
+  }
+
+  /* Remove fade on mobile so text isn’t obscured */
+  #site-intro::after {
+    display: none;
+  }
+}
