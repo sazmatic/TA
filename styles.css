@@ -1265,3 +1265,23 @@ header .site-info .tagline-pill {
   line-height: 1.6;
   font-size: 0.95rem;
 }
+/* ===== WIDER NEGOTIATION UPDATES ===== */
+
+#negotiation-updates {
+  max-width: 1200px;   /* wider on desktop */
+  padding: 2.5rem;
+}
+
+/* Let images use the full width */
+#negotiation-updates img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Mobile stays clean */
+@media (max-width: 600px) {
+  #negotiation-updates {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+}
