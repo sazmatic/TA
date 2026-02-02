@@ -1547,3 +1547,37 @@ header .site-info .tagline-pill {
     pointer-events: none;
   }
 }
+
+/* ===== OFFICIAL RESOURCES CALLOUT ===== */
+
+#official-resources {
+  max-width: 1100px;
+  margin: 0.75rem auto 1.25rem;
+  padding: 0.75rem 1.25rem;
+
+  background: #f5f9ff;
+  border: 1px solid #c9dcff;
+  border-left: 4px solid #2f6cc6;
+  border-radius: 8px;
+
+  text-align: center;
+}
+
+#official-resources a {
+  text-decoration: none;
+  color: #1f4fa1;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+#official-resources a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile: tighter */
+@media (max-width: 600px) {
+  #official-resources {
+    margin: 0.6rem 1rem 1rem;
+    font-size: 0.9rem;
+  }
+}
