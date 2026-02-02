@@ -1674,3 +1674,54 @@ header .site-info .tagline-pill {
 
 /* Mobile tuning */
 @media (max-width
+/* ===== CLEAN PROMINENT RESOURCES BUTTON ===== */
+
+#official-resources {
+  max-width: 1100px;
+  margin: 0.9rem auto 1.2rem;
+  padding: 0 1rem;
+}
+
+#official-resources a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+
+  background: #2f6cc6;
+  color: #ffffff;
+
+  font-weight: 800;
+  font-size: 0.98rem;
+  line-height: 1.25;
+
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+#official-resources a:hover {
+  background: #3b7df0;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+}
+
+#official-resources a:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+}
+
+@media (max-width: 600px) {
+  #official-resources {
+    margin: 0.7rem 0 1rem;
+    padding: 0 1rem;
+  }
+
+  #official-resources a {
+    font-size: 0.92rem;
+    padding: 0.8rem 1rem;
+  }
+}
