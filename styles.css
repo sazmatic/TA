@@ -1621,3 +1621,56 @@ header .site-info .tagline-pill {
     font-size: 0.95rem;
   }
 }
+/* ===== CLICKABLE, MOVING RESOURCES CALLOUT ===== */
+
+#official-resources {
+  max-width: 1100px;
+  margin: 1rem auto 1.75rem;
+}
+
+#official-resources a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+
+  padding: 1.1rem 1.6rem;
+  background: #2f6cc6;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+
+  animation: resourcePulse 3.2s ease-in-out infinite;
+}
+
+/* Stop motion on hover — feels premium */
+#official-resources a:hover {
+  animation: none;
+  background: #3b7df0;
+}
+
+/* Main line */
+.resource-title {
+  display: block;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+/* Secondary "click here" cue */
+.resource-sub {
+  display: block;
+  margin-top: 0.25rem;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Subtle motion — not obnoxious */
+@keyframes resourcePulse {
+  0%   { transform: translateY(0);     box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+  50%  { transform: translateY(-3px);  box-shadow: 0 10px 22px rgba(0,0,0,0.28); }
+  100% { transform: translateY(0);     box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+}
+
+/* Mobile tuning */
+@media (max-width
