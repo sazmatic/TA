@@ -1725,3 +1725,35 @@ header .site-info .tagline-pill {
     padding: 0.8rem 1rem;
   }
 }
+/* ===== CLEAN OUTLINED RESOURCES LINK ===== */
+
+#official-resources {
+  max-width: 1100px;
+  margin: 0.9rem auto 1.2rem;
+  padding: 0 1rem;
+}
+
+#official-resources a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  padding: 0.8rem 1.1rem;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #1f4fa1;
+
+  font-weight: 700;
+  font-size: 0.95rem;
+
+  border: 2px solid #c9dcff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+#official-resources a:hover {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
