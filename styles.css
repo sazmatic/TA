@@ -1547,134 +1547,7 @@ header .site-info .tagline-pill {
     pointer-events: none;
   }
 }
-
-/* ===== OFFICIAL RESOURCES CALLOUT ===== */
-
-#official-resources {
-  max-width: 1100px;
-  margin: 0.75rem auto 1.25rem;
-  padding: 0.75rem 1.25rem;
-
-  background: #f5f9ff;
-  border: 1px solid #c9dcff;
-  border-left: 4px solid #2f6cc6;
-  border-radius: 8px;
-
-  text-align: center;
-}
-
-#official-resources a {
-  text-decoration: none;
-  color: #1f4fa1;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-#official-resources a:hover {
-  text-decoration: underline;
-}
-
-/* Mobile: tighter */
-@media (max-width: 600px) {
-  #official-resources {
-    margin: 0.6rem 1rem 1rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* ===== PROMINENT OFFICIAL RESOURCES CALLOUT ===== */
-
-#official-resources {
-  max-width: 1100px;
-  margin: 1rem auto 1.5rem;
-  padding: 1rem 1.5rem;
-
-  background: #2f6cc6;              /* strong, official blue */
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-
-  text-align: center;
-}
-
-#official-resources a {
-  display: block;
-  text-decoration: none;
-
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-}
-
-#official-resources:hover {
-  background: #3b7df0;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  #official-resources {
-    margin: 0.75rem 1rem 1.25rem;
-    padding: 0.9rem 1.1rem;
-  }
-
-  #official-resources a {
-    font-size: 0.95rem;
-  }
-}
-/* ===== CLICKABLE, MOVING RESOURCES CALLOUT ===== */
-
-#official-resources {
-  max-width: 1100px;
-  margin: 1rem auto 1.75rem;
-}
-
-#official-resources a {
-  display: block;
-  text-decoration: none;
-  text-align: center;
-
-  padding: 1.1rem 1.6rem;
-  background: #2f6cc6;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-
-  animation: resourcePulse 3.2s ease-in-out infinite;
-}
-
-/* Stop motion on hover — feels premium */
-#official-resources a:hover {
-  animation: none;
-  background: #3b7df0;
-}
-
-/* Main line */
-.resource-title {
-  display: block;
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-}
-
-/* Secondary "click here" cue */
-.resource-sub {
-  display: block;
-  margin-top: 0.25rem;
-  color: rgba(255,255,255,0.9);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-/* Subtle motion — not obnoxious */
-@keyframes resourcePulse {
-  0%   { transform: translateY(0);     box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
-  50%  { transform: translateY(-3px);  box-shadow: 0 10px 22px rgba(0,0,0,0.28); }
-  100% { transform: translateY(0);     box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
-}
-
-/* Mobile tuning */
-@media (max-width
-/* ===== CLEAN PROMINENT RESOURCES BUTTON ===== */
+/* ===== OFFICIAL RESOURCES (FINAL) ===== */
 
 #official-resources {
   max-width: 1100px;
@@ -1688,105 +1561,39 @@ header .site-info .tagline-pill {
   text-decoration: none;
 
   padding: 0.85rem 1.1rem;
-  border-radius: 12px;
-
-  background: #2f6cc6;
-  color: #ffffff;
-
-  font-weight: 800;
-  font-size: 0.98rem;
-  line-height: 1.25;
-
-  border: 2px solid rgba(255,255,255,0.25);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.16);
-
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-}
-
-#official-resources a:hover {
-  background: #3b7df0;
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
-}
-
-#official-resources a:active {
-  transform: translateY(0);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.16);
-}
-
-@media (max-width: 600px) {
-  #official-resources {
-    margin: 0.7rem 0 1rem;
-    padding: 0 1rem;
-  }
-
-  #official-resources a {
-    font-size: 0.92rem;
-    padding: 0.8rem 1rem;
-  }
-}
-/* ===== CLEAN OUTLINED RESOURCES LINK ===== */
-
-#official-resources {
-  max-width: 1100px;
-  margin: 0.9rem auto 1.2rem;
-  padding: 0 1rem;
-}
-
-#official-resources a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-
-  padding: 0.8rem 1.1rem;
   border-radius: 10px;
 
   background: #ffffff;
   color: #1f4fa1;
 
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.95rem;
+  line-height: 1.25;
 
   border: 2px solid #c9dcff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 
-  transition: box-shadow 0.18s ease, transform 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
 #official-resources a:hover {
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  background: #f5f9ff;
   transform: translateY(-1px);
-}
-/* ===== FINAL OVERRIDE: REMOVE BLUE BACKGROUND FROM RESOURCES LINK ===== */
-
-#official-resources {
-  max-width: 1100px !important;
-  margin: 0.9rem auto 1.2rem !important;
-  padding: 0 1rem !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-#official-resources a {
-  background: #ffffff !important;
-  color: #1f4fa1 !important;
-
-  border: 2px solid #c9dcff !important;
-  border-radius: 10px !important;
-
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06) !important;
-
-  padding: 0.8rem 1.1rem !important;
-  font-weight: 700 !important;
-  font-size: 0.95rem !important;
-
-  text-decoration: none !important;
-  display: block !important;
-  text-align: center !important;
-
-  animation: none !important;   /* kills any motion */
+#official-resources a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
-#official-resources a:hover {
-  background: #ffffff !important;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12) !important;
-  transform: translateY(-1px) !important;
+@media (max-width: 600px) {
+  #official-resources {
+    margin: 0.75rem auto 1rem;
+  }
+
+  #official-resources a {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
 }
